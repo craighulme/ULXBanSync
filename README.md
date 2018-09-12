@@ -9,7 +9,7 @@ Syncs your ULX bans with a MySQL database.
 # Installation
 1. Download the current release from the [releases page](https://github.com/iViscosity/ULXBanSync/releases)
 2. Extract the contents of the ZIP into garrysmod/addons/
-3. Perform all necessary edits in `ban_sync/config/config.lua` (if you skip this step, this addon **WILL NOT** work)
+3. Perform all necessary edits in `lua/ban_sync/config/config.lua` (if you skip this step, this addon **WILL NOT** work)
 4. Perform a COMPLETE server restart (**A MAP CHANGE WILL NOT WORK**)
 
 # For Developers

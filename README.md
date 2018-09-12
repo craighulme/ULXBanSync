@@ -1,6 +1,9 @@
 # ULXBanSync
 Syncs your ULX bans with a MySQL database.
 
+# DISCLAIMER
+UNTIL THIS NOTE IS REMOVED, THIS IS UNTESTED AND MAY OR MAY NOT WORK. USE AT YOUR OWN RISK.
+
 # Features
 - Uses [MySQLOO](https://github.com/FredyH/MySQLOO/releases) to sync your Bans with a MySQL Database.
 - Fairly lightweight.

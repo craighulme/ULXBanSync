@@ -13,7 +13,7 @@ Syncs your ULX bans with a MySQL database.
 4. Perform a COMPLETE server restart (**A MAP CHANGE WILL NOT WORK**)
 
 # For Developers
-I have provided several functions for use of this addon in your addons. More info on the [[wiki|For Developers]].
+I have provided several functions for use of this addon in your addons. More info on the [wiki](https://github.com/iViscosity/ULXBanSync/wiki/For-Developers).
 
 # NOTE
 This DOES NOT stop ULib from writing to bans.txt. This addon synchronizes everything in bans.txt with a MySQL database, and vice versa.

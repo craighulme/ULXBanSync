@@ -6,7 +6,7 @@ UNTIL THIS NOTE IS REMOVED, THIS IS UNTESTED AND MAY OR MAY NOT WORK. USE AT YOU
 
 # Features
 - Uses [MySQLOO](https://github.com/FredyH/MySQLOO/releases) to sync your Bans with a MySQL Database.
-- Fairly lightweight.
+- Fairly lightweight (only runs on bans/unbans and startup).
 - Performs automatic cleanup (performed weekly).
 
 # Installation

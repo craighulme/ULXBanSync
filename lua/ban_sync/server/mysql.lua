@@ -102,6 +102,8 @@ function bsync.sync(bdata)
     function q:onError(err, _)
         ServerLog("Fatal Error: Could not update ban data: " .. bdata.steamID)
     end
+
+    q:start()
 end
 
 --[[
@@ -124,6 +126,8 @@ function bsync.remove(steamid)
     function q:onError(err, _)
         ServerLog("Error: Could not remove ban data of " .. steamid .. ": " .. err)
     end
+
+    q:start()
 end
 
 --[[

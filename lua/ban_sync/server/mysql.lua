@@ -92,6 +92,7 @@ end
         bdata - The table of ban data.
 ]]
 function bsync.sync(bdata)
+    if not bsync.sync_all and bdata.unban - bdata.time < bsync.min_time then return end
     local query = "REPLACE INTO bsync_bans (steamid, time, unban, reason, name, admin, modified_admin, modified_time) " .. string.format("VALUES (%s, %i, %i, %s, %s, %s, %s, %s);", util.SteamIDTo64(bdata.steamID), bdata.time or 0, bdata.unban or 0, escapeOrNull(bdata.reason), escapeOrNull(bdata.name), escapeOrNull(bdata.admin), escapeOrNull(bdata.modified_admin), escapeOrNull(bdata.modified_time))
     local q = db:query(query)
 
@@ -149,4 +150,25 @@ function bsync.cleanup()
     end
 
     q:start()
+end
+
+--[[
+    Function: getall
+
+    Returns a table of all bans, nil on error.
+]]
+function bsync.getall()
+    local query = "SELECT * FROM bsync_bans"
+    local q = db:query(query)
+    local bdata = nil
+
+    function q:onSuccess(data)
+        bdata = data
+    end
+
+    function q:onError(err, _)
+        ServerLog("Error: Could not retrieve ban data: " .. err)
+    end
+
+    return bdata
 end

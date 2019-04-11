@@ -16,7 +16,7 @@ function init()
 			end
 		end
 
-		bsync.queue_func(bsync.msyql_init)
+		bsync.queue_func(bsync.mysql_init)
 	end
 end
 
